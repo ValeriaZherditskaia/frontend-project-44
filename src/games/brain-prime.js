@@ -7,8 +7,6 @@ export const isPrime = () => {
 
   const generateRound = () => {
     const randomInt = random(0, 100);
-    let correctAnswer;
-
     if (randomInt < 2) return { question: randomInt, correctAnswer: "no" };
     if (randomInt === 2) return { question: randomInt, correctAnswer: "yes" };
     if (randomInt % 2 === 0)

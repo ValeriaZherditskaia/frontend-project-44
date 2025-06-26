@@ -5,7 +5,7 @@ export const playGame = (exercise, generateRound) => {
   const userName = greetUser();
   const roundsCount = 3;
 
-  console.log(exercise); //задание
+  console.log(exercise); // задание
 
   for (let i = 0; i < roundsCount; i += 1) {
     const { question, correctAnswer } = generateRound();
