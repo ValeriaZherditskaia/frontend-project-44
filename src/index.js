@@ -26,3 +26,6 @@ export const playGame = (exercise, generateRound) => {
 
   console.log(`Congratulations, ${userName}!`);
 };
+
+export const random = (minNum = 0, maxNum = 100) =>
+  Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;

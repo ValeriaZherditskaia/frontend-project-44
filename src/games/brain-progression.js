@@ -1,4 +1,5 @@
 import { playGame } from "../index.js";
+import { random } from "../index.js";
 
 export const progressionGame = () => {
   const exercise = "What number is missing in the progression?";
@@ -12,13 +13,13 @@ export const progressionGame = () => {
       return progression;
     };
 
-    const start = Math.floor(Math.random() * 6);
-    const step = Math.floor(Math.random() * 6) + 1; // +1 чтобы шаг не был равен 0
+    const start = random(0, 5);
+    const step = random(1, 6);
     const lengthProgression = 10;
 
     const progression = generateProgression(start, step, lengthProgression);
 
-    const randomIndexArr = Math.floor(Math.random() * 10);
+    const randomIndexArr = random(0, lengthProgression - 1);
     const correctAnswer = String(progression[randomIndexArr]);
     progression[randomIndexArr] = "..";
     const question = progression.join(" ");
