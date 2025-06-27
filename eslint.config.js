@@ -9,13 +9,13 @@ export default defineConfig([
     files: ['**/*.{js,mjs,cjs}'],
     plugins: {
       '@eslint/js': js,
-      '@stylistic': stylistic
+      '@stylistic': stylistic,
     },
     extends: [
-      js.configs.recommended, 
-      stylistic.configs.recommended
+      js.configs.recommended,
+      stylistic.configs.recommended,
     ],
-    languageOptions: { globals: globals.node }
+    languageOptions: { globals: globals.node },
   },
-  prettier
+  prettier,
 ])

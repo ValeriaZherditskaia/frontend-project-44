@@ -3,7 +3,7 @@ import { random } from '../index.js'
 
 export const calculator = () => {
   const exercise = 'What is the result of the expression?'
-  const operations = ["+", "-", "*"]
+  const operations = ['+', '-', '*']
 
   const generateRound = () => {
     const randomIndex = random(0, operations.length - 1)
@@ -16,13 +16,13 @@ export const calculator = () => {
 
     let correctAnswer
     switch (randomOperation) {
-      case "+":
+      case '+':
         correctAnswer = String(randomInt1 + randomInt2)
         break
-      case "-":
+      case '-':
         correctAnswer = String(randomInt1 - randomInt2)
         break
-      case "*":
+      case '*':
         correctAnswer = String(randomInt1 * randomInt2)
         break
     }
