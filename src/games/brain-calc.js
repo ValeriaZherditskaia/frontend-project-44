@@ -1,10 +1,12 @@
 import { playGame } from '../index.js'
-import { random } from '../index.js'
+import { random } from '../helpers.js'
+import { calculate } from '../helpers.js'
+
+
+const exercise = 'What is the result of the expression?'
+const operations = ['+', '-', '*']
 
 export const calculator = () => {
-  const exercise = 'What is the result of the expression?'
-  const operations = ['+', '-', '*']
-
   const generateRound = () => {
     const randomIndex = random(0, operations.length - 1)
     const randomOperation = operations[randomIndex]
@@ -13,19 +15,7 @@ export const calculator = () => {
     const randomInt2 = random(0, 100)
 
     const question = `${randomInt1} ${randomOperation} ${randomInt2}`
-
-    let correctAnswer
-    switch (randomOperation) {
-      case '+':
-        correctAnswer = String(randomInt1 + randomInt2)
-        break
-      case '-':
-        correctAnswer = String(randomInt1 - randomInt2)
-        break
-      case '*':
-        correctAnswer = String(randomInt1 * randomInt2)
-        break
-    }
+    const correctAnswer = String(calculate(randomInt1, randomInt2, randomOperation))
     return { question, correctAnswer }
   }
 

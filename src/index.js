@@ -1,9 +1,12 @@
-import { greetUser } from './cli.js'
+import { greet } from '../src/cli.js'
+import { askUserName } from '../src/cli.js'
 import readlineSync from 'readline-sync'
 
+const roundsCount = 3
+
 export const playGame = (exercise, generateRound) => {
-  const userName = greetUser()
-  const roundsCount = 3
+  greet()
+  const userName = askUserName()
 
   console.log(exercise) // задание
 
@@ -26,6 +29,3 @@ export const playGame = (exercise, generateRound) => {
 
   console.log(`Congratulations, ${userName}!`)
 }
-
-export const random = (minNum = 0, maxNum = 100) =>
-  Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum
