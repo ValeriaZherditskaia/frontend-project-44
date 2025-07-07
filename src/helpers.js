@@ -15,7 +15,7 @@ export const calculate = (a, b, operation) => {
 }
 
 // Функция для проверки, является ли число  чётным
-export const isEven = (num) => num % 2 === 0
+export const isEven = num => num % 2 === 0
 
 // Функция вычисляет наибольший общий делитель
 export const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b))

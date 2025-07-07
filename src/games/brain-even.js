@@ -2,7 +2,6 @@ import { playGame } from '../index.js'
 import { random } from '../helpers.js'
 import { isEven } from '../helpers.js'
 
-
 const exercise = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 const generateRound = () => {

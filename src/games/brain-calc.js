@@ -2,7 +2,6 @@ import { playGame } from '../index.js'
 import { random } from '../helpers.js'
 import { calculate } from '../helpers.js'
 
-
 const exercise = 'What is the result of the expression?'
 const operations = ['+', '-', '*']
 
